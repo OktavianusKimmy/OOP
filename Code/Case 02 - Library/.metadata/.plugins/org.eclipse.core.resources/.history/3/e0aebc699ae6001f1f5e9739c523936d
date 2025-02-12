@@ -1,0 +1,18 @@
+package Main;
+
+import java.util.ArrayList;
+
+public class Author{
+	String name;
+	String desc;
+	public Author(String string2, String string3){
+		name = string2;
+		desc = string3;
+	}
+	public class getName{
+		return name;
+	}
+	public class getDesc{
+		return desc;
+	}
+}

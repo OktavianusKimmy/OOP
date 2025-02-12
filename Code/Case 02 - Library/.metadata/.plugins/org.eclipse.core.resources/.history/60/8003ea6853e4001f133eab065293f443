@@ -1,0 +1,17 @@
+package Main;
+
+public class Author(String name, String Desc) {
+
+}
+
+public class Book{
+	
+}
+
+public class Library{
+	
+}
+
+public class Borrower{
+	
+}

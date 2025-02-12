@@ -1,0 +1,61 @@
+package Main;
+
+import java.util.ArrayList;
+
+public class Author{
+	String name;
+	String desc;
+	public Author(String string2, String string3){
+		name = string2;
+		desc = string3;
+	}
+	public class getName{
+		return name;
+	}
+	public class getDesc{
+		return desc;
+	}
+}
+
+public class Book{
+	String judul;
+	String ISBN;
+	Author author;
+	int avail;
+	public Book(String string1, String string2, Author abc){
+		judul = string1;
+		ISBN = string2;
+		author = abc;
+		avail = 1;
+	}
+}
+
+ArrayList<Book> arr = new ArrayList<Book>();
+// arr isinya buku dan author
+public class Library{
+	
+	public void addBook(Book one) {
+		arr.add(one);
+		System.out.println("Book added to library: " + one.judul);
+	}
+	
+	public void borrowBook(Borrower peminjam, Book buku) {
+		System.out.println(peminjam.nama + " borrowed: " + buku.judul);
+		buku.avail = 0;
+	}
+	
+	
+}
+
+public class Borrower{
+	String nama;
+	public Borrower(String name) {
+		nama = name;
+	}
+	
+	public void displayBorrowedBooks() {
+		arr.forEach((n) -> {System.out.println(n); } );
+	}
+	
+	
+}

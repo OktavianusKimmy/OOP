@@ -1,0 +1,11 @@
+package Main;
+
+public class Borrower {
+	String nama;
+	public Borrower(String name) {
+		nama = name;
+		public void displayBorrowedBooks() {
+			arr.forEach((n) -> {System.out.println(n); } );
+		}
+	}
+}

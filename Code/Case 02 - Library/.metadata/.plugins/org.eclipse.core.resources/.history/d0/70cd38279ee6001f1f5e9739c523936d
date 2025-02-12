@@ -1,0 +1,9 @@
+package Main;
+
+public class Borrower {
+	String nama;
+	public Borrower(String name) {
+		nama = name;
+		
+	}
+}
