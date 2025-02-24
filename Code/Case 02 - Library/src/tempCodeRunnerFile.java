@@ -1,1 +1,0 @@
-ntln(peminjam.nama + " borrowed: " + buku.judul);
