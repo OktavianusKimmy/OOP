@@ -10,7 +10,11 @@ public class Viewer {
         return name;
     }
 
-    public ArrayList<Movie> rented = new ArrayList<Movie>();
+    private ArrayList<Movie> rented = new ArrayList<Movie>();
+
+    public ArrayList<Movie> getRentedMovie(){
+        return rented;
+    }
 
     public void displayRentedMovies(){
         System.out.println("Bob's Rented Movies:");

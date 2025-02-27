@@ -8,14 +8,14 @@ public class Cinema {
     }
 
     public void rentMovie(Viewer viewer, Movie movie){
-        viewer.rented.add(movie);
+        viewer.getRentedMovie().add(movie);
         System.out.println(viewer.getName() + " rented: " + movie.getJudul());
         arr.remove(movie);
     }
 
     public void returnMovie(Viewer viewer, Movie movie){
         arr.add(movie);
-        viewer.rented.remove(movie);
+        viewer.getRentedMovie().remove(movie);
         System.out.println("Bob returned: " + movie.getJudul());
     }
 
