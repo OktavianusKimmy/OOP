@@ -19,14 +19,17 @@ public class Board {
 
     public void move(Player player){
         Scanner scan = new Scanner(System.in);
-        System.out.print("Enter position: ");
+		String who;
+		if(player.simbol == 'O') who = "Player 1";
+		else who = "Player 2";
+        System.out.print(who + " move: ");
         int posX = scan.nextInt();
         int posY = scan.nextInt();
         if(posX < 0 || posX > 2 || posY < 0 || posY > 2) {
             System.out.println("Invalid position");
         }
-        else if(gameBoard[posX][posY] == '-') {
-            gameBoard[posX][posY] = player.simbol;
+        else if(gameBoard[posY][posX] == '-') {
+            gameBoard[posY][posX] = player.simbol;
         }
         else {
             System.out.println("Position already taken");
