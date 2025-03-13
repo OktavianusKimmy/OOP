@@ -25,8 +25,8 @@ public class Main {
             System.out.println("Input document size in MB [1 - " + usedStorage + "]: ");
             size = scan.nextInt();
         } while(size < 1 || size > usedStorage);
-
-        storage.addDocument(name, size);
+        Document document = new Document(name, size);
+        storage.addDocument(document);
         System.out.println("Success input document data!");
         enterToContinue();
     }
@@ -57,8 +57,8 @@ public class Main {
         Storage storage = new Storage();
         Scanner scan = new Scanner(System.in);
         int choice = 0;
-        int remaining = 1024 - storage.getAvailStorage();
         do{
+            int remaining = 1024 - storage.getAvailStorage();
             System.out.println("Hov Document Manager");
             System.out.println("================================");
             System.out.println("Available Storage: " + remaining + " MB / 1024 MB");

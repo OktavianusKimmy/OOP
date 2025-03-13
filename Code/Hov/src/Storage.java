@@ -1,8 +1,6 @@
 import java.util.*;
 
 public class Storage {
-    private String name;
-    private int size;
 
     private int usedStorage = 0;
     private ArrayList<Document> documents = new ArrayList<Document>();
@@ -15,9 +13,9 @@ public class Storage {
         return documents;
     }
 
-    public void addDocument(String name, int size){
-        Document document = new Document(name, size);
+    public void addDocument(Document document){
         documents.add(document);
-        usedStorage += size;
+        System.out.println("Document added successfully!");
+        usedStorage += document.size;
     }
 }
