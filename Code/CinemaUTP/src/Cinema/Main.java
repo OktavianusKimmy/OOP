@@ -27,9 +27,9 @@ public class Main {
         showtime1.addTicket(ticket1);
         customer1.addTicket(ticket1);
         
-        Ticket ticket2 = new Ticket(2, 50.0, customer1);
-        showtime2.addTicket(ticket2);
-        customer1.addTicket(ticket2);
+//        Ticket ticket2 = new Ticket(2, 50.0, customer1);
+//        showtime2.addTicket(ticket2);
+//        customer1.addTicket(ticket2);
 
         cinema.displayCinemaInfo();
     }
