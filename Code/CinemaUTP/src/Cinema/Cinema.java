@@ -72,39 +72,39 @@ public class Cinema {
 			}
 		}
 		System.out.println("Customers:");
-		for(Hall hall : halls) {
-			for(Showtime showtime : hall.getShowTime()) {
-				for(Ticket ticket : showtime.getTicket()) {
-					System.out.println("- Name: " + ticket.getCustomer().getName() + ", Age: " + ticket.getCustomer().getAge());
-					System.out.println("  Tickets:");
-					System.out.print("    * Ticket ID: " + ticket.getId() + ", Movie: " + showtime.getMovie().getTitle() + ", Showtime: " + showtime.getTime() + ", Date: " + showtime.getDate() + ", Price: " + ticket.getPrice() + ", Status: ");
-					if(ticket.getPaymentStatus() == true) {
-						System.out.println("Paid");
-					}
-					else {
-						System.out.println("Unpaid");
-					}
-				}
-			}
-		}
-		
 //		for(Hall hall : halls) {
 //			for(Showtime showtime : hall.getShowTime()) {
 //				for(Ticket ticket : showtime.getTicket()) {
 //					System.out.println("- Name: " + ticket.getCustomer().getName() + ", Age: " + ticket.getCustomer().getAge());
 //					System.out.println("  Tickets:");
-//					for(Ticket tick : ticket.getCustomer().getTicket()) {
-//						System.out.print("    * Ticket ID: " + tick.getCustomer().getName() + ", Movie: " + showtime.getMovie().getTitle() + ", Showtime: " + showtime.getTime() + ", Date: " + showtime.getDate() + ", Price: " + tick.getPrice() + ", Status: ");
-//						if(tick.getPaymentStatus() == true) {
-//							System.out.println("Paid");
-//						}
-//						else {
-//							System.out.println("Unpaid");
-//						}
+//					System.out.print("    * Ticket ID: " + ticket.getId() + ", Movie: " + showtime.getMovie().getTitle() + ", Showtime: " + showtime.getTime() + ", Date: " + showtime.getDate() + ", Price: " + ticket.getPrice() + ", Status: ");
+//					if(ticket.getPaymentStatus() == true) {
+//						System.out.println("Paid");
+//					}
+//					else {
+//						System.out.println("Unpaid");
 //					}
 //				}
 //			}
 //		}
+		
+		for(Hall hall : halls) {
+			for(Showtime showtime : hall.getShowTime()) {
+				for(Ticket ticket : showtime.getTicket()) {
+					System.out.println("- Name: " + ticket.getCustomer().getName() + ", Age: " + ticket.getCustomer().getAge());
+					System.out.println("  Tickets:");
+					for(Ticket tick : ticket.getCustomer().getTicket()) {
+						System.out.print("    * Ticket ID: " + tick.getCustomer().getName() + ", Movie: " + showtime.getMovie().getTitle() + ", Showtime: " + showtime.getTime() + ", Date: " + showtime.getDate() + ", Price: " + tick.getPrice() + ", Status: ");
+						if(tick.getPaymentStatus() == true) {
+							System.out.println("Paid");
+						}
+						else {
+							System.out.println("Unpaid");
+						}
+					}
+				}
+			}
+		}
 	}
 	
 }
