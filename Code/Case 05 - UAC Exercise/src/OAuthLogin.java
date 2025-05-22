@@ -1,13 +1,13 @@
 public class OAuthLogin implements ILogin{
-    private String authentic;
+    private String token;
 
-    public OAuthLogin(String authentic){
-        this.authentic = authentic;
+    public OAuthLogin(String token){
+        this.token = token;
     }
 
     @Override
     public boolean authenticate(String username, String password){
-        if(password.equals(authentic)) return true;
+        if(password.equals(token)) return true;
         else return false;
     }
 }
